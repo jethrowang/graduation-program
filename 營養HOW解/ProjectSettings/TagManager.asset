@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - collection
+  - enemy
+  - bullet
+  - platform
+  - player
+  - saliva
+  - deadline
+  - boss
+  - sound
+  - bosscorner
+  - door
+  - acid
+  - heart
+  - ship
+  - flag
+  - ball
+  - trash
+  - sound1
+  - sound4
+  - sound3-2
+  - sound3-1
+  - wall
+  - water4-1
+  - water4-2
+  - sound2
+  - virus
+  - bacterial
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - ground
+  - postprocessing
+  - fluids
+  - background
+  - player
+  - enemy
+  - acid
+  - ladder
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1345679463
+    locked: 0
+  - name: player
+    uniqueID: 2559672547
+    locked: 0
+  - name: frontground
+    uniqueID: 3155106513
+    locked: 0
+  - name: UI
+    uniqueID: 3208787633
+    locked: 0
