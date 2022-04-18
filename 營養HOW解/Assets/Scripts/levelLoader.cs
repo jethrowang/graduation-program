@@ -8,14 +8,6 @@ public class levelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime;
 
-    void Update()
-    {
-        // if(Input.GetMouseButtonDown(0))
-        // {
-        //     LoadNextLevel();
-        // }
-    }
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex+1));
@@ -38,8 +30,11 @@ public class levelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        var loadingOperation = SceneManager.LoadSceneAsync(levelIndex);
+        loadingOperation.allowSceneActivation = false;
         transition.SetTrigger("start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(levelIndex);
+        // SceneManager.LoadScene(levelIndex);
+        loadingOperation.allowSceneActivation = true;
     }
 }

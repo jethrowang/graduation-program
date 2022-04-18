@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 3978042865568302038}
-  transitionTime: 0.5
+  transitionTime: 0.3
 --- !u!95 &5240550189872585337
 Animator:
   serializedVersion: 3
