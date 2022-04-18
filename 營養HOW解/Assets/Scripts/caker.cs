@@ -194,7 +194,7 @@ public class caker : MonoBehaviour
         rb.AddForce(new Vector2(0f,jumpForce),ForceMode2D.Impulse);
         GetComponent<Collider2D>().enabled=false;
         GetComponent<BoxCollider2D>().enabled=false;
-        Destroy(gameObject,2f);
+        Destroy(gameObject,1f);
     }
 
     void Throw()

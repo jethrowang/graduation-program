@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 174467367}
   m_Layer: 0
   m_Name: stick6
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2745,7 +2745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -220.17557, y: 105.85408, z: -10}
+  m_LocalPosition: {x: -220.14859, y: 105.85406, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4110,7 +4110,7 @@ GameObject:
   - component: {fileID: 1137242275}
   m_Layer: 0
   m_Name: stick8
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4313,7 +4313,7 @@ GameObject:
   - component: {fileID: 1143005638}
   m_Layer: 0
   m_Name: stick7
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4671,6 +4671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: levelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289249972937627934, guid: 3217445cbfa2721428511f586dca6865,
+        type: 3}
+      propertyPath: transitionTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8504650323169349416, guid: 3217445cbfa2721428511f586dca6865,
         type: 3}
@@ -5941,7 +5946,7 @@ PrefabInstance:
     - target: {fileID: 1801698400564252491, guid: f2fe3a432c208b7489b08bd160f90cc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1801698400564252491, guid: f2fe3a432c208b7489b08bd160f90cc2,
         type: 3}
@@ -6268,7 +6273,6 @@ GameObject:
   - component: {fileID: 2145954379}
   - component: {fileID: 2145954378}
   - component: {fileID: 2145954380}
-  - component: {fileID: 2145954381}
   m_Layer: 0
   m_Name: water
   m_TagString: water4-2
@@ -6353,7 +6357,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5573311, y: 4.350171}
+  m_Offset: {x: -0.5573311, y: -0.37518072}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6364,28 +6368,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 58.235336, y: 38.7231}
+  m_Size: {x: 58.235336, y: 29.272388}
   m_EdgeRadius: 0
---- !u!250 &2145954381
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145954377}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceMagnitude: -100
-  m_ForceVariation: 0
-  m_DistanceScale: 1
-  m_ForceSource: 1
-  m_ForceTarget: 1
-  m_ForceMode: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!1001 &760788823617273049
 PrefabInstance:
   m_ObjectHideFlags: 0

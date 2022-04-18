@@ -119,9 +119,9 @@ public class ship4 : MonoBehaviour
             }
         }else
         {
+            water.GetComponent<BoxCollider2D>().enabled=false;
             timeLeft=0f;
             loseDialog.SetActive(true);
-            // Time.timeScale=0f;
         }
     }
 

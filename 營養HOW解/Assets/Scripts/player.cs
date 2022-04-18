@@ -111,6 +111,7 @@ public class player : MonoBehaviour
     void GoGo()
     {
         hp=maxHp;
+        caker.hp=2;
         collectionAnim.SetTrigger("plus");
         collections+=20;
         this.gameObject.transform.position=new Vector2(playerInstantiate.transform.position.x,playerInstantiate.transform.position.y);
@@ -290,21 +291,6 @@ public class player : MonoBehaviour
             Destroy(lastEnemy);
             BossFloor();
         }
-        if(collision.tag=="door")
-        {
-            soundmanager.sound_instance.DoorAudio();
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
-            passLevel=true;
-            anim.Play("fadeout");
-            Invoke("GotoMenu",0.8f);
-        }
-        if(collision.tag=="ship")
-        {
-            soundmanager.sound_instance.DoorAudio();
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
-            anim.Play("fadeout");
-            Invoke("NextScene",0.5f);
-        }
         if(collision.tag=="heart")
         {
             soundmanager.sound_instance.HeartAudio();
@@ -350,6 +336,27 @@ public class player : MonoBehaviour
         {
             Hurt();
         }
+        if(collision.tag=="door")
+        {
+            if(isGround)
+            {
+                soundmanager.sound_instance.DoorAudio();
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                passLevel=true;
+                anim.Play("fadeout");
+                Invoke("GotoMenu",0.8f);
+            }
+        }
+        if(collision.tag=="ship")
+        {
+            if(isGround)
+            {
+                soundmanager.sound_instance.DoorAudio();
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                anim.Play("fadeout");
+                Invoke("NextScene",0.5f);
+            }
+        }
     }
 
     void Lose()
@@ -390,6 +397,18 @@ public class player : MonoBehaviour
             {
                 Hurt();
                 rb.AddForce(-Vector2.right*hurtForce,ForceMode2D.Impulse);
+            }
+        }
+        if(collision.gameObject.tag=="boss")
+        {
+            if(transform.position.x<collision.gameObject.transform.position.x)
+            {
+                Hurt();
+                rb.AddForce(-Vector2.right*hurtForce,ForceMode2D.Impulse);
+            }else if(transform.position.x>collision.gameObject.transform.position.x)
+            {
+                Hurt();
+                rb.AddForce(Vector2.right*hurtForce,ForceMode2D.Impulse);
             }
         }
     }

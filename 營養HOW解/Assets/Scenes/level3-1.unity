@@ -4799,7 +4799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.369293, y: 2.0989978, z: -10}
+  m_LocalPosition: {x: -50.374577, y: 2.098998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16861,9 +16861,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.27, y: -0.24}
+  m_Offset: {x: 0.74811685, y: 0.14261797}
   serializedVersion: 2
-  m_Radius: 1.5518097
+  m_Radius: 3.7513063
 --- !u!1001 &2026069934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17823,6 +17823,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 2008644504}
+    - target: {fileID: 6344500530951960270, guid: fb0b4ad9fdd4094448b7a3a3630303d9,
+        type: 3}
+      propertyPath: max_hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6344500530951960270, guid: fb0b4ad9fdd4094448b7a3a3630303d9,
         type: 3}
       propertyPath: player

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11227,7 +11227,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.30745238}
+  m_Offset: {x: 0, y: -0.6023398}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11238,7 +11238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17385586, y: 0.8754394}
+  m_Size: {x: 0.31037706, y: 1.2553769}
   m_EdgeRadius: 0
 --- !u!1 &508408862
 GameObject:
@@ -11681,7 +11681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.097225, y: 1.5197058, z: -10}
+  m_LocalPosition: {x: -26.09769, y: 1.5197039, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27460,6 +27460,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 507875611}
+    - target: {fileID: 2852557383080955099, guid: 0018bafcc7fc4da45a6e7793e9705ad7,
+        type: 3}
+      propertyPath: max_hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2852557383080955099, guid: 0018bafcc7fc4da45a6e7793e9705ad7,
         type: 3}
       propertyPath: player
