@@ -5,10 +5,11 @@ using UnityEngine.Audio;
 
 public class volumeManager : MonoBehaviour
 {
-    [SerializeField]private AudioMixer myAudioMixer;
+    public AudioMixer myAudioMixer;
     public void SetVolume(float sliderValue)
     {
-        myAudioMixer.SetFloat("MasterVolume",Mathf.Log10(sliderValue)*20);
-        Debug.Log(Mathf.Log10(sliderValue)*20);
+        Debug.Log("sliderValue");
+        // myAudioMixer.SetFloat("MasterVolume",Mathf.Log10(sliderValue)*20);
+        // myAudioMixer.SetFloat("MasterVolume",sliderValue);
     }
 }
