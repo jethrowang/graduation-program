@@ -30,11 +30,11 @@ public class levelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        var loadingOperation = SceneManager.LoadSceneAsync(levelIndex);
-        loadingOperation.allowSceneActivation = false;
+        // var loadingOperation = SceneManager.LoadSceneAsync(levelIndex);
+        // loadingOperation.allowSceneActivation = false;
         transition.SetTrigger("start");
         yield return new WaitForSeconds(transitionTime);
-        // SceneManager.LoadScene(levelIndex);
-        loadingOperation.allowSceneActivation = true;
+        SceneManager.LoadScene(levelIndex);
+        // loadingOperation.allowSceneActivation = true;
     }
 }
