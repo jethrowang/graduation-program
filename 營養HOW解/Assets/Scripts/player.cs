@@ -8,8 +8,8 @@ public class player : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D coll;
-    private Animator anim,collectionAnim,hpAnim,displayAnim,floorBossAnim,heartEffectAnim;
-    public GameObject floorBoss;
+    private Animator anim,collectionAnim,hpAnim,displayAnim,floorBossAnim,heartEffectAnim,winAnim;
+    public GameObject floorBoss,win;
     public bool isHurt,isCrouch,isGround,isJump,isClimb;
     public bool facing_right=true;
     public Transform ceilingCheck,groundCheck;
@@ -24,7 +24,8 @@ public class player : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     public float fireRate,nextFire;
-    public int hp,maxHp;
+    public int maxHp;
+    static public int hp;
     public float invincibleTime,invincibleTimer;
     static public bool isInvincible;
     private float shake;
@@ -83,6 +84,10 @@ public class player : MonoBehaviour
             floorBossAnim=GameObject.Find("floorBoss").GetComponent<Animator>();
         }
         heartEffectAnim=GameObject.Find("heartEffect").GetComponent<Animator>();
+        if(win)
+        {
+            winAnim=GameObject.Find("win").GetComponent<Animator>();
+        }
     }
 
     void Update()
@@ -90,6 +95,10 @@ public class player : MonoBehaviour
         Hpfunction();
         Collectionsnum();
         Invinsible();
+        if(hp>=1 && caker.hp==0)
+        {
+            winAnim.Play("win");
+        }
     }
 
     void FixedUpdate()
@@ -338,7 +347,7 @@ public class player : MonoBehaviour
         }
         if(collision.tag=="door")
         {
-            if(isGround)
+            if(isGround && hp>=1)
             {
                 soundmanager.sound_instance.DoorAudio();
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -349,7 +358,7 @@ public class player : MonoBehaviour
         }
         if(collision.tag=="ship")
         {
-            if(isGround)
+            if(isGround && hp>=1)
             {
                 soundmanager.sound_instance.DoorAudio();
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;

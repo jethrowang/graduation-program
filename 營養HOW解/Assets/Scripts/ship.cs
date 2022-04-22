@@ -202,7 +202,7 @@ public class ship : MonoBehaviour
     void Collectionsnum()
     {
         collectionsnum.text=collections.ToString();
-        if(collections>=8)
+        if(collections>=8 && hp>=1)
         {
             door.SetActive(true);
             winAnim.Play("win");

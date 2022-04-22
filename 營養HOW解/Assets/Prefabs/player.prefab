@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorBoss: {fileID: 0}
+  win: {fileID: 0}
   isHurt: 0
   isCrouch: 0
   isGround: 0
@@ -381,7 +382,6 @@ MonoBehaviour:
   firePoint: {fileID: 7556381387143783585}
   fireRate: 0.5
   nextFire: 0
-  hp: 0
   maxHp: 5
   invincibleTime: 1.5
   invincibleTimer: 0

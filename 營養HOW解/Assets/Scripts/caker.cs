@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class caker : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Animator anim,winAnim;
-    public GameObject win;
+    private Animator anim;
     private Collider2D coll;
     public bool faceleft=true;
     public float speed;
@@ -29,10 +28,6 @@ public class caker : MonoBehaviour
     {
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
-        if(win)
-        {
-            winAnim=GameObject.Find("win").GetComponent<Animator>();
-        }
         coll=GetComponent<Collider2D>();
         hp=max_hp;
     }
@@ -180,7 +175,6 @@ public class caker : MonoBehaviour
             Invoke("Escape",0.35f);
             anim.Play("escapejump");
             Invoke("Appear",1f);
-            winAnim.Play("win");
         }
     }
 
